@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zaid Hardan</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+  display:flex;
+  background:#0a0a0a;
+  color:white;
+  scroll-behavior:smooth;
+}
+
+/* LOADER */
+#loader{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:black;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:999;
+}
+
+/* PARTICLES */
+#particles-js{
+  position:fixed;
+  width:100%;
+  height:100%;
+  z-index:-1;
+}
+
+/* SIDEBAR */
+.sidebar{
+  width:260px;
+  height:100vh;
+  background:#111;
+  padding:25px;
+  position:fixed;
+}
+
+.profile{
+  text-align:center;
+}
+
+.profile img{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  border:3px solid #00f7ff;
+  box-shadow:0 0 25px #00f7ff;
+}
+
+.nav{
+  margin-top:40px;
+}
+
+.nav a{
+  display:block;
+  margin:15px 0;
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.nav a:hover{
+  color:#00f7ff;
+  transform:translateX(10px);
+}
+
+/* MAIN */
+.main{
+  margin-left:260px;
+  padding:40px;
+  width:100%;
+}
+
+.section{
+  margin-bottom:80px;
+  animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(30px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* BUTTONS */
+.buttons a{
+  display:inline-block;
+  margin:10px;
+  padding:12px 25px;
+  background:#00f7ff;
+  color:black;
+  border-radius:25px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.buttons a:hover{
+  background:white;
+  transform:scale(1.1);
+}
+
+/* CARDS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+  border-radius:15px;
+  overflow:hidden;
+  transition:0.4s;
+}
+
+.card img{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+}
+
+.card-content{
+  padding:15px;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.05);
+  box-shadow:0 0 25px #00f7ff;
+}
+
+/* SOCIAL */
+.social i{
+  font-size:25px;
+  margin:10px;
+  transition:0.3s;
+}
+
+.social i:hover{
+  transform:scale(1.3);
+  color:#00f7ff;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  color:#aaa;
+}
+
+/* MOBILE */
+@media(max-width:800px){
+  .sidebar{
+    position:relative;
+    width:100%;
+    height:auto;
+    text-align:center;
+  }
+  .main{
+    margin-left:0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div id="loader">🚀 Loading Portfolio...</div>
+<div id="particles-js"></div>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <div class="profile">
+    <img src="zaid.jpg">
+    <h2>Zaid Hardan</h2>
+  </div>
+
+  <div class="nav">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#what">What I Do</a>
+    <a href="#projects">Projects</a>
+    <a href="#stats">Stats</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+<section id="home" class="section">
+  <h1>Hello, I'm Zaid 👋</h1>
+  <div class="buttons">
+    <a href="#">Download CV</a>
+    <a href="mailto:zaid.hardan1@outlook.com">Hire Me</a>
+  </div>
+</section>
+
+<section id="about" class="section">
+<h2>About Me</h2>
+<p>
+Computer Science & Software Engineering student passionate about building scalable systems and modern applications.
+</p>
+</section>
+
+<section id="what" class="section">
+<h2>What I Do</h2>
+<div class="cards">
+<div class="card"><div class="card-content"><h3>Web Development</h3><p>Modern responsive websites</p></div></div>
+<div class="card"><div class="card-content"><h3>Software Engineering</h3><p>System design & architecture</p></div></div>
+<div class="card"><div class="card-content"><h3>Problem Solving</h3><p>Efficient solutions</p></div></div>
+</div>
+</section>
+
+<section id="projects" class="section">
+<h2>Projects</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1584551246679-0daf3d275d0f">
+<div class="card-content">
+<h3>Azkar App</h3>
+<p>Islamic application</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
+<div class="card-content">
+<h3>Restaurant Website</h3>
+<p>Modern UI</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+<div class="card-content">
+<h3>Task System</h3>
+<p>Productivity system</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="stats" class="section">
+<h2>Stats</h2>
+<div class="cards">
+<div class="card"><div class="card-content"><h3>+3 Projects</h3></div></div>
+<div class="card"><div class="card-content"><h3>Java Developer</h3></div></div>
+<div class="card"><div class="card-content"><h3>Zarqa University</h3></div></div>
+</div>
+</section>
+
+<section id="achievements" class="section">
+<h2>Achievements</h2>
+<div class="cards">
+<div class="card"><div class="card-content"><h3>HTUX Program</h3></div></div>
+<div class="card"><div class="card-content"><h3>Multiple Projects</h3></div></div>
+<div class="card"><div class="card-content"><h3>Strong Java Skills</h3></div></div>
+</div>
+</section>
+
+<section id="contact" class="section">
+<h2>Contact</h2>
+<p>Email: zaid.hardan1@outlook.com</p>
+
+<div class="social">
+<a href="https://jo.linkedin.com/in/%D8%B2%D9%8A%D8%AF-%D8%AD%D8%B1%D8%AF%D8%A7%D9%86-zaid-hardan"><i class="fab fa-linkedin"></i></a>
+<a href="https://www.instagram.com/zaid__hardan/"><i class="fab fa-instagram"></i></a>
+</div>
+</section>
+
+</div>
+
+<footer>
+© 2026 Zaid Hardan — All Rights Reserved
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script>
+particlesJS("particles-js", {
+  particles:{
+    number:{value:80},
+    size:{value:3},
+    move:{speed:1},
+    line_linked:{enable:true}
+  }
+});
+
+/* LOADER */
+window.onload=()=>{
+  setTimeout(()=>{
+    document.getElementById("loader").style.display="none";
+  },1000);
+}
+</script>
+
+</body>
+</html>
